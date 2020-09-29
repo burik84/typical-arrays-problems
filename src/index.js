@@ -1,45 +1,39 @@
 exports.min = function min(array) {
     if (!(array instanceof Array) || array.length === 0) {
-        console.log(0);
         return 0;
-    }
-
-    let min = array[0];
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] < min) {
-            min = array[i];
+    }else{
+        let min = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
         }
+        return min;
     }
-
-    // console.log(array, min);
-    return min;
 }
 
 exports.max = function max(array) {
     if (!(array instanceof Array) || array.length === 0) {
-        console.log(0);
         return 0;
-    }
-    let max = array[0];
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] > max) {
-            max = array[i];
+    }else{
+        let max = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
         }
+        return max;
     }
-    // console.log(array, max);
-    return max;
 }
 
 exports.avg = function avg(array) {
-    if (!(array instanceof Array) || array.length === 0) {
-        console.log(0);
-        return 0;
-    }
     let avg = 0;
-    for (let i = 0; i < array.length; i++) {
-        avg += array[i];
+    if (!(array instanceof Array) || array.length === 0) {
+        return 0;
+    }else{
+        for (let i = 0; i < array.length; i++) {
+            avg += array[i];
+        }
     }
-    // avg = avg / array.length;
-    // console.log(array, avg);
     return avg / array.length;
 }
